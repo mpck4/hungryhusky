@@ -37,6 +37,8 @@ export default function App() {
         <div className="text-center mb-8">
           <h1 className="text-2xl font-bold text-red-500 mb-1">🐾 Hungry Husky</h1>
           <p className="text-gray-400 text-sm">Track your dining dollars budget</p>
+          <p className="text-gray-500 text-xs mt-1">
+    created by <a href="https://github.com/mpck4" className="underline hover:text-gray-400">mpck4</a></p>
         </div>
 
         <div className="bg-gray-800 rounded-lg p-6 space-y-5">
