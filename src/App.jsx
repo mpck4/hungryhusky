@@ -10,7 +10,7 @@ const MEAL_PLANS = [
 
 const SEMESTER_WEEKS = 16;
 
-export default function DiningTracker() {
+export default function App() {
   const [selectedPlan, setSelectedPlan] = useState(MEAL_PLANS[0]);
   const [spent, setSpent] = useState('');
   const [weeksRemaining, setWeeksRemaining] = useState(SEMESTER_WEEKS);
@@ -35,7 +35,7 @@ export default function DiningTracker() {
     <div className="min-h-screen bg-gray-900 text-gray-100 p-6">
       <div className="max-w-md mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-bold text-red-500 mb-1">NEU Dining Tracker</h1>
+          <h1 className="text-2xl font-bold text-red-500 mb-1">🐾 Hungry Husky</h1>
           <p className="text-gray-400 text-sm">Track your dining dollars budget</p>
         </div>
 
