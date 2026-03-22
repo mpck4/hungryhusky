@@ -13,12 +13,12 @@ const SEMESTER_WEEKS = 16;
 export default function App() {
   const [selectedPlan, setSelectedPlan] = useState(MEAL_PLANS[0]);
   const [spent, setSpent]               = useState('');
-  const [weeksRemaining, setWeeksRemaining] = useState(SEMESTER_WEEKS);
+  const [weeksRemaining, setWeeksRemaining] = useState(String(SEMESTER_WEEKS));
 
   const calc = useMemo(() => {
     const spentNum  = parseFloat(spent) || 0;
     const remaining = Math.max(0, selectedPlan.diningDollars - spentNum);
-    const weeks     = Math.max(1, weeksRemaining);
+    const weeks = Math.max(1, parseInt(weeksRemaining) || 0);
     const perWeek   = remaining / weeks;
 
     return {
@@ -104,7 +104,7 @@ export default function App() {
               min:         1,
               max:         20,
               step:        1,
-              onChange:    (e) => setWeeksRemaining(parseInt(e.target.value) || 1),
+              onChange: (e) => setWeeksRemaining(e.target.value),
             },
           ].map(({ label, ...props }) => (
             <div key={label}>
