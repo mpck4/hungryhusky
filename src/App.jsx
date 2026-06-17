@@ -163,8 +163,12 @@ export default function App() {
         </div>
 
         {/* ── Footer ── */}
+        <div className="privacy text-center text-neutral-600 text-xs">
+          This website does not collect, store, or share any<br />
+          personal data or use tracking cookies.
+        </div>
         <p className="text-center text-neutral-700 text-xs pb-2">
-          Fall/Spring 2025–2X · Dining Dollars expire end of term · created by {' '}
+          Fall/Spring 2025–2X · Dining Dollars expire end of term · created by{' '}
           <a href="https://github.com/mpck4" className="hover:text-neutral-400 underline transition-colors">
             mpck4
           </a>
